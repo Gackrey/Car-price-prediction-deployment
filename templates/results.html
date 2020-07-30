@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Prediction</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/main.css')}}">
+</head>
+<body>
+    <h1>Car Price prediction</h1>
+    <form action="{{url_for('predict')}}" method="POST">
+           <label for="carbody"> Choose Car Body type:</label>
+           <select class = "carbody" name="carbody">
+               <option value="convertible">Convertible</option>
+               <option value="hardtop">Hardtop</option>
+               <option value="hatchback">Hatchback</option>
+               <option value="sedan">Sedan</option>
+               <option value="wagon">Wagon</option>               
+            </select><br><br>
+            <label for="enginetype"> Choose Engine type:</label>
+           <select class="enginetype" name="enginetype">
+               <option value="dohc">DOHC</option>
+               <option value="dohcv">DOHCV</option>
+               <option value="l">I</option>
+               <option value="ohc">OHC</option>
+               <option value="ohcf">OHCF</option>
+               <option value="ohcv">OHCV</option>                       
+               <option value="rotor">Rotor</option>               
+            </select>
+        <p>Length:<input type="text" name = "length" placeholder="Range: (141-208)in" required/></p>
+        <p>Width:<input type="text" name = "width" placeholder="Range: (60-73)in" required/></p>
+        <p>Horsepower:<input type="text" name = "horsepower"  placeholder="Range: (48-288)" required/></p>
+        <p>Mileage:<input type="text" name = "mileage" placeholder="Range: (14-51)mpg" required/></p>
+        <input type="submit" name="Submit"/>
+    </form>
+    <p class="res">The Price is: $ {{prediction_text}}</p>
+</body>
+</html>

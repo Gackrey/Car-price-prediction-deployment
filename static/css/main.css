@@ -1,0 +1,35 @@
+html,body
+{
+    margin: 0;
+    padding: 0;
+}
+form
+{
+    background-color: darkslategrey;
+    color: white;
+    margin-left: 380pt;
+    margin-top: 50px;
+    padding: 20px;
+    border: 2px solid black;
+    width: 30%;
+}
+h1
+{
+    text-align: center;
+    color:darkblue;
+}
+.label
+{
+    font-size: 16;
+    font-family: sans-serif;
+}
+.res
+{
+    margin-left: 380pt;
+    font-size: 22;
+    font-family: sans-serif;
+}
+input,option
+{
+    margin-left: 7px;
+}
